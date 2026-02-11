@@ -95,7 +95,7 @@ const App: React.FC = () => {
       <audio 
         ref={audioRef} 
         loop 
-        src="/song/Gamma_Skies_Victor_Lundberg_-_Season_of_Love_(mp3.pm).mp3" 
+        src="/song/season_of_love.mp3" 
       />
 
       <AnimatePresence>
