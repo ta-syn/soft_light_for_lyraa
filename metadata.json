@@ -1,0 +1,8 @@
+
+{
+  "name": "For Lyraa - Crimson Love Story",
+  "description": "A high-end, premium romantic website featuring deep rose neon aesthetics, glassmorphism, and cinematic love story elements for Yuki and Lyraa.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
