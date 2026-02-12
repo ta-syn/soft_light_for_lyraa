@@ -138,7 +138,7 @@ const Gallery: React.FC = () => {
                     <span className="text-[10px] uppercase tracking-[0.4em] font-semibold">{selectedItem.date}</span>
                   </div>
 
-                  <h3 className="serif text-3xl md:text-5xl lg:text-6xl text-rose-50 italic drop-shadow-xl">
+                  <h3 className="serif text-3xl md:text-5xl lg:text-6xl text-rose-50 italic drop-shadow-xl whitespace-nowrap">
                     {selectedItem.title}
                   </h3>
 
