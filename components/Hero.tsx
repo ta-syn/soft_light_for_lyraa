@@ -25,20 +25,20 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="flex items-center justify-center gap-4 mb-8"
+          className="flex items-center justify-center gap-2 md:gap-4 mb-6 md:mb-8"
         >
-          <div className="h-[1px] w-12 bg-rose-500/50" />
-          <Sparkle className="text-rose-500" size={16} />
-          <span className="serif italic text-xl md:text-2xl text-rose-200">For My Dearest</span>
-          <Sparkle className="text-rose-500" size={16} />
-          <div className="h-[1px] w-12 bg-rose-500/50" />
+          <div className="h-[1px] w-6 md:w-12 bg-rose-500/50" />
+          <Sparkle className="text-rose-500 md:size-[16px]" size={12} />
+          <span className="serif italic text-sm md:text-xl lg:text-2xl text-rose-200">For My Dearest</span>
+          <Sparkle className="text-rose-500 md:size-[16px]" size={12} />
+          <div className="h-[1px] w-6 md:w-12 bg-rose-500/50" />
         </motion.div>
         
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.5 }}
-          className="text-7xl md:text-9xl font-bold tracking-tighter serif leading-none"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-bold tracking-tighter serif leading-none"
         >
           <span className="block text-rose-50 text-transparent bg-clip-text bg-gradient-to-r from-rose-100 via-rose-500 to-rose-100 drop-shadow-[0_0_30px_rgba(225,29,72,0.3)]">
             Lyraa

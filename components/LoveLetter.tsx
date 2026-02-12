@@ -31,7 +31,7 @@ Yuki`;
       <div className="max-w-4xl mx-auto px-6">
         <motion.div
           onViewportEnter={() => setIsStarted(true)}
-          className="relative p-12 md:p-24 rounded-[40px] glass-card neon-border shadow-[0_0_100px_rgba(225,29,72,0.1)]"
+          className="relative p-6 md:p-12 lg:p-24 rounded-2xl md:rounded-3xl lg:rounded-[40px] glass-card neon-border shadow-[0_0_100px_rgba(225,29,72,0.1)]"
         >
           {/* Decorative Elements */}
           <div className="absolute top-10 right-10">
@@ -46,7 +46,7 @@ Yuki`;
             </motion.div>
           </div>
 
-          <div className="whitespace-pre-wrap font-light text-lg md:text-xl leading-relaxed text-rose-100/80 serif min-h-[350px]">
+          <div className="whitespace-pre-wrap font-light text-base md:text-lg lg:text-xl leading-relaxed text-rose-100/80 serif min-h-[250px] md:min-h-[350px]">
             {displayedText}
             <motion.span 
               animate={{ opacity: [0, 1, 0] }}

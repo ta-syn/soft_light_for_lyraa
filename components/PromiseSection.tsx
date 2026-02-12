@@ -24,15 +24,15 @@ const PromiseSection: React.FC = () => {
             transition={{ duration: 1.5 }}
             className="text-center mb-24"
         >
-            <h2 className="serif text-5xl md:text-7xl text-rose-50 mb-6 italic tracking-tight">My Vows to You</h2>
-            <div className="flex items-center justify-center gap-4 opacity-30">
-                <div className="h-[1px] w-12 bg-rose-500" />
-                <p className="text-rose-400 uppercase tracking-[0.6em] text-[10px] font-bold">Unbreakable and Eternal</p>
-                <div className="h-[1px] w-12 bg-rose-500" />
+            <h2 className="serif text-3xl md:text-5xl lg:text-7xl text-rose-50 mb-4 md:mb-6 italic tracking-tight">My Vows to You</h2>
+            <div className="flex items-center justify-center gap-2 md:gap-4 opacity-30">
+                <div className="h-[1px] w-8 md:w-12 bg-rose-500" />
+                <p className="text-rose-400 uppercase tracking-[0.4em] md:tracking-[0.6em] text-[8px] md:text-[10px] font-bold">Unbreakable and Eternal</p>
+                <div className="h-[1px] w-8 md:w-12 bg-rose-500" />
             </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 lg:gap-12">
           {promises.map((p, i) => (
             <motion.div
               key={i}
@@ -46,7 +46,7 @@ const PromiseSection: React.FC = () => {
                 backgroundColor: "rgba(225,29,72,0.05)"
               }}
               onHoverStart={() => playGlobalSound('hover')}
-              className="glass-card p-12 rounded-[40px] border border-rose-500/10 text-center transition-all duration-500 group relative"
+              className="glass-card p-6 md:p-8 lg:p-12 rounded-2xl md:rounded-3xl lg:rounded-[40px] border border-rose-500/10 text-center transition-all duration-500 group relative"
             >
               <div className="mb-10 mx-auto w-20 h-20 rounded-[24px] bg-rose-950/20 border border-rose-500/10 flex items-center justify-center group-hover:scale-110 group-hover:border-rose-500/30 transition-all duration-500 group-hover:rotate-6">
                 <p.icon size={32} className="text-rose-400 group-hover:text-rose-50 transition-colors" />

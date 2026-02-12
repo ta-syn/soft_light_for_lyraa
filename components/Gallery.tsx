@@ -50,13 +50,13 @@ const Gallery: React.FC = () => {
         <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-center mb-24"
+            className="text-center mb-16 md:mb-24"
         >
-            <h2 className="serif text-5xl md:text-6xl text-rose-100 mb-6 italic tracking-tight">Captured Whispers</h2>
-            <p className="text-rose-400/40 uppercase tracking-[0.5em] text-[10px]">Moments frozen in the amber of eternity</p>
+            <h2 className="serif text-3xl md:text-5xl lg:text-6xl text-rose-100 mb-4 md:mb-6 italic tracking-tight">Captured Whispers</h2>
+            <p className="text-rose-400/40 uppercase tracking-[0.3em] md:tracking-[0.5em] text-[9px] md:text-[10px]">Moments frozen in the amber of eternity</p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8">
           {galleryItems.map((item, i) => (
             <motion.div
               key={i}
@@ -75,9 +75,9 @@ const Gallery: React.FC = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0c0206] via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
               
-              <div className="absolute bottom-8 left-8 right-8 text-rose-100 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="text-[9px] uppercase tracking-[0.4em] text-rose-500 font-bold mb-2">Visual Echo 0{i+1}</p>
-                <h4 className="serif italic text-2xl group-hover:text-rose-400 transition-colors">{item.title}</h4>
+              <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 right-4 md:right-8 text-rose-100 transform translate-y-2 md:translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-[8px] md:text-[9px] uppercase tracking-[0.3em] md:tracking-[0.4em] text-rose-500 font-bold mb-1 md:mb-2">Visual Echo 0{i+1}</p>
+                <h4 className="serif italic text-lg md:text-2xl group-hover:text-rose-400 transition-colors">{item.title}</h4>
               </div>
               
               <div className="absolute top-8 right-8 p-3 bg-rose-600/20 backdrop-blur-md rounded-full opacity-0 group-hover:opacity-100 transition-all scale-75 group-hover:scale-100">
@@ -95,14 +95,14 @@ const Gallery: React.FC = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8 bg-black/98 backdrop-blur-3xl cursor-zoom-out"
+            className="fixed inset-0 z-[200] flex items-center justify-center p-2 md:p-4 lg:p-8 bg-black/98 backdrop-blur-3xl cursor-zoom-out"
           >
             <motion.div
               initial={{ scale: 0.9, y: 100, opacity: 0 }}
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.9, y: 100, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="relative max-w-5xl w-full bg-[#0c0206] rounded-[48px] overflow-hidden border border-rose-500/10 shadow-[0_0_100px_rgba(225,29,72,0.1)] flex flex-col md:flex-row min-h-[500px] h-auto max-h-[90vh] cursor-default"
+              className="relative max-w-5xl w-full bg-[#0c0206] rounded-2xl md:rounded-3xl lg:rounded-[48px] overflow-hidden border border-rose-500/10 shadow-[0_0_100px_rgba(225,29,72,0.1)] flex flex-col md:flex-row min-h-[400px] md:min-h-[500px] h-auto max-h-[90vh] cursor-default"
               onClick={e => e.stopPropagation()}
             >
               {/* Image Column */}
@@ -122,9 +122,9 @@ const Gallery: React.FC = () => {
               </div>
 
               {/* Message Column */}
-              <div className="w-full md:w-1/2 p-10 md:p-16 flex flex-col justify-center relative bg-gradient-to-br from-[#1a050d] to-[#0c0206]">
-                <div className="absolute top-0 right-0 p-12 opacity-[0.03] pointer-events-none">
-                  <Heart size={200} className="text-rose-500" />
+              <div className="w-full md:w-1/2 p-6 md:p-10 lg:p-16 flex flex-col justify-center relative bg-gradient-to-br from-[#1a050d] to-[#0c0206]">
+                <div className="absolute top-0 right-0 p-4 md:p-8 lg:p-12 opacity-[0.03] pointer-events-none">
+                  <Heart size={100} className="md:size-[150px] lg:size-[200px] text-rose-500" />
                 </div>
 
                 <motion.div
@@ -138,13 +138,13 @@ const Gallery: React.FC = () => {
                     <span className="text-[10px] uppercase tracking-[0.4em] font-semibold">{selectedItem.date}</span>
                   </div>
 
-                  <h3 className="serif text-5xl md:text-6xl text-rose-50 italic drop-shadow-xl">
+                  <h3 className="serif text-3xl md:text-5xl lg:text-6xl text-rose-50 italic drop-shadow-xl">
                     {selectedItem.title}
                   </h3>
 
                   <div className="relative">
-                    <Quote className="absolute -top-10 -left-10 text-rose-500/10" size={80} />
-                    <p className="text-rose-100/90 text-xl md:text-2xl leading-relaxed font-light serif italic relative z-10">
+                    <Quote className="absolute -top-6 -left-6 md:-top-10 md:-left-10 text-rose-500/10 md:size-[80px]" size={40} />
+                    <p className="text-rose-100/90 text-base md:text-xl lg:text-2xl leading-relaxed font-light serif italic relative z-10">
                       "{selectedItem.message}"
                     </p>
                   </div>

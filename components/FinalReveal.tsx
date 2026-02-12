@@ -56,7 +56,7 @@ const FinalReveal: React.FC = () => {
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 3, ease: "easeOut" }}
-        className="text-center space-y-24 relative z-10"
+        className="text-center space-y-12 md:space-y-24 relative z-10"
       >
         <motion.div
           animate={{
@@ -68,7 +68,7 @@ const FinalReveal: React.FC = () => {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="mx-auto w-40 h-40 text-rose-600 mb-12 cursor-pointer"
+          className="mx-auto w-24 h-24 md:w-40 md:h-40 text-rose-600 mb-8 md:mb-12 cursor-pointer"
           onClick={() => playGlobalSound('heartbeat')}
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="drop-shadow-[0_0_50px_rgba(225,29,72,1)] opacity-90">
@@ -81,7 +81,7 @@ const FinalReveal: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 2, delay: 0.5 }}
-                className="text-7xl md:text-[140px] serif leading-none tracking-tighter"
+                className="text-4xl md:text-7xl lg:text-[140px] serif leading-none tracking-tighter"
             >
                 <span className="text-rose-50 block mb-4">Lyraa,</span>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 via-pink-400 to-rose-600 drop-shadow-[0_0_30px_rgba(225,29,72,0.4)] italic">
@@ -96,12 +96,12 @@ const FinalReveal: React.FC = () => {
           transition={{ delay: 2.5, duration: 2 }}
           className="flex flex-col items-center gap-10"
         >
-          <p className="text-rose-400/30 uppercase tracking-[1.5em] text-[10px] font-light">The End of the Beginning</p>
-          <div className="h-[1px] w-64 bg-gradient-to-r from-transparent via-rose-500/20 to-transparent" />
+          <p className="text-rose-400/30 uppercase tracking-[0.8em] md:tracking-[1.5em] text-[8px] md:text-[10px] font-light">The End of the Beginning</p>
+          <div className="h-[1px] w-32 md:w-64 bg-gradient-to-r from-transparent via-rose-500/20 to-transparent" />
           <motion.div
             animate={{ opacity: [0.2, 0.6, 0.2] }}
             transition={{ duration: 4, repeat: Infinity }}
-            className="magical-font text-2xl text-rose-200/40 italic"
+            className="magical-font text-base md:text-2xl text-rose-200/40 italic"
           >
             Signed with an unbreakable promise.
           </motion.div>
